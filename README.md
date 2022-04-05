@@ -1,34 +1,152 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.JS Boilerplate Essentials
 
-## Getting Started
+The easiest way to quick-start Next.JS projects, only the essentials!
 
-First, run the development server:
+Ideal for simple projects, proofs of concept and prototypes.
+
+Also ideal for beginners, newcomers and those who are just getting started with Next.JS. 
+
+Focusing on ease of use and simplicity.
+
+>Less is more. - [Ludwig Mies van der Rohe](https://en.wikipedia.org/wiki/Ludwig_Mies_van_der_Rohe)
+
+
+**Also includes:**
+- A set of guidelines for writing reusable components to help you build a better product.
+- Out-of-the-box linting and formatting to make your code look beautiful.
+- Sample theme and global styles, just change the colors and fonts and you're good to go.
+- SEO library already integrated, so you can focus on creating meaningful content.
+- TypeScript support, ensuring your code if error-free before deploying.
+- SWC support, to speed up your development workflow and reduce bundle size.
+
+---
+
+## 📋 Table of contents
+1. [Motivation](#motivation)
+1. [Getting Started](#getting-started)
+1. [What's Included?](#included-packages)
+1. [Project Structure](#structure)
+1. [Closing Thoughts](#closing-thoughts)
+
+
+---
+
+## 💬 Motivation <span id="motivation"/>
+
+Sometimes, you want to start a new project with Next.JS but you don't want to install all the dependencies by yourself. You can then use boilerplates to get a project up and running quickly. However, you might not want to use all the dependencies that are included in the boilerplate.
+
+While production-ready boilerplates are available, you might not need it for small projects or a quick proof-of-concept.
+
+This boilerplate includes only bare-bones components and libraries that are needed for a simple project, the idea is to get you up and running quickly and you take over from there.
+
+With the vast ammount of architecture and design patterns that are available, it's hard to choose the right boilerplate for your project and even then, architecture decisions are not always straightforward or properly documented.
+
+The structure of the project should also allow pieces of code to be reused, changed, or removed without affecting the rest of the project.
+
+More than just serving as a way to get a project up and running quickly, **Next.JS Boilerplate Essentials** provides a set of battle-tested rules and best practices that can be used to create a project that is easy to expand and maintain. So you can waste less time trying to figure out how to do something and more time doing it!
+
+I hope you enjoy using **Next.JS Boilerplate Essentials!**
+
+---
+
+## 📁 Getting started <span id="getting-started"/>
+
+You can use this as a template simply by clicking the `Use this template` button.
+
+Then, clone your repository and run the following commands:
+
 
 ```bash
-npm run dev
-# or
+# Install dependencies
+yarn
+
+# Run the development server
 yarn dev
 ```
+Open [http://localhost:3000](http://localhost:3000) with your browser of choice.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+From there, you can customize the project to your liking and start coding!
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 🧰 What's included? <span id="included-packages"/>
+- [Next.JS](https://nextjs.org/) - The production-ready framework for React.
+- [React](https://reactjs.org/) - The JavaScript library for building user interfaces.
+- [TypeScript](https://www.typescriptlang.org/) - A strongly typed superset of JavaScript to catch errors before they happen.
+- [Styled-Components](https://styled-components.com/) - A CSS-in-JS library useful for theming, styling and more.
+- [Axios](https://axios-http.com/) - A promise-based HTTP client to make requests in both Node.js and the browser.  
+- [Prettier](https://prettier.io/) - An opinionated code formatter to make your code look beautiful.
+- [ESLint](https://eslint.org/) - A linter for JavaScript and JSX, useful for ensuring your code is error-free.
+- [Next SEO](https://github.com/garmeeh/next-seo) - A library to manage your project's SEO easily.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+---
 
-## Learn More
+## 📐 Project Structure <span id="structure"/>
 
-To learn more about Next.js, take a look at the following resources:
+While the project structure is very self-explanatory, it's important to know how to use it.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+File-specific information can be found inside the file itself as comments.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+```bash
+.
+├── public # Static files
+│   └── images
+│       └── favicon.ico 
+├── src # Your source code.
+│   ├── components # All your components should be here.
+│   │   └── common # Shared components.
+│   ├── context # Contexts for your components.
+│   │   └── myContext.tsx 
+│   ├── hooks # Hooks to use in your components.
+│   ├── layout # Layouts for your pages.
+│   │   └── Home
+│   │       ├── HeroSection # Sections for the layout.
+│   │       │   ├── index.tsx 
+│   │       │   └── styles.ts
+│   │       ├── index.tsx
+│   │       └── styles.ts
+│   ├── lib # External libraries and utilities.
+│   │   ├── services # Services, such as API's.
+│   │   │   └── api.ts
+│   │   └── utils # Utilities, such as helpers.
+│   │       └── youtubeUtils.ts
+│   ├── pages # Default Next.JS pages.
+│   │   ├── api # API routes.
+│   │   │   └── hello.ts
+│   │   ├── _app.tsx # Custom App component.
+│   │   ├── _document.tsx # Custom Document component.
+│   │   └── index.tsx # Landing page.
+│   └── styles # Global styles.
+│       ├── global.ts # Global style definitions.
+│       ├── styled.d.ts # Type definitions for styled-components.
+│       └── theme.ts # Theme definitions.
+├── .editorconfig
+├── .env.development # Environment variables for development.
+├── .eslintignore
+├── .eslintrc.json
+├── .gitignore
+├── next-env.d.ts
+├── next-seo.config.js # SEO configuration.
+├── next.config.js
+├── package.json
+├── README.md
+├── tsconfig.json
+└── yarn.lock
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 👋🏻 Closing thoughts <span id="closing-thoughts"/>
+
+Remember that sharing this boilerplate is a great to help me get feedback and help others learn from it. If you have any questions, please feel free to shoot me an [email](mailto:me@doval.dev).
+
+Also feel free to fork this project and make your own! I would love to see what you come up with.
+
+### And remember:
+
+- **🚫 No spaghetti code allowed!**
+
+- **🤝🏻 Help others in their dev journey!**
+
+- **🤓 Have fun coding!**
