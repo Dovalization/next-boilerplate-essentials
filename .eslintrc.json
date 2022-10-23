@@ -1,10 +1,12 @@
 {
   "extends": [
     "next",
-    "prettier"
+    "prettier",
+    "plugin:tailwindcss/recommended"
   ],
   "plugins": [
-    "prettier"
+    "prettier",
+    "tailwindcss"
   ],
   "rules": {
     "prettier/prettier": "error"

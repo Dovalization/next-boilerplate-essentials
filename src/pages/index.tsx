@@ -1,4 +1,4 @@
-import { HomeLayout } from "@/layout/Home";
+import { HomeLayout } from "@/layouts/Home";
 import type { GetStaticProps, NextPage } from "next";
 import { NextSeo } from "next-seo";
 // Naming convention:
@@ -19,7 +19,7 @@ const Home: NextPage<HomeProps> = ({ title }) => {
   return (
     <>
       <NextSeo title="Home" />
-      <HomeLayout title={title} />;
+      <HomeLayout title={title} />
     </>
   );
 };

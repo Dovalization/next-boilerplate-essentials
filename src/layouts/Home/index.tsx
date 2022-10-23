@@ -1,6 +1,5 @@
 import { HomeProps } from "@pages/index";
 import { HeroSection } from "./HeroSection";
-import * as S from "./styles";
 // Layouts are responsible for holding different components together
 // this can be achieved by creating multiple sections whithin the layout
 
@@ -18,8 +17,8 @@ type HomeLayoutProps = HomeProps;
 
 export const HomeLayout = ({ title }: HomeLayoutProps) => {
   return (
-    <S.Wrapper>
+    <main>
       <HeroSection title={title} />
-    </S.Wrapper>
+    </main>
   );
 };
