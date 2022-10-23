@@ -99,7 +99,7 @@ File-specific information can be found inside the file itself as comments.
 │   ├── context # Contexts for your components.
 │   │   └── myContext.tsx 
 │   ├── hooks # Hooks to use in your components.
-│   ├── layout # Layouts for your pages.
+│   ├── layouts # Layouts for your pages.
 │   │   └── Home
 │   │       ├── HeroSection # Sections for the layout.
 │   │       │   ├── index.tsx 
