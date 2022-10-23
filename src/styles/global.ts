@@ -63,7 +63,7 @@ export const GlobalStyle = createGlobalStyle`
     text-transform: uppercase;
   }
 
-  [disable] {
+  [disabled] {
     opacity: 0.6;
     pointer-events: none;
     cursor: not-allowed;
